@@ -6,7 +6,8 @@ public class Factura_detalle {
 	private int cantidad;
 	private double subtotal;
 	
-	
+	private Factura factura;
+	private libro libro;
 	public Factura_detalle() {}
 
 
@@ -15,6 +16,8 @@ public class Factura_detalle {
 		this.idFactura_detalle = idFactura_detalle;
 		this.cantidad = cantidad;
 		this.subtotal = subtotal;
+		
+		
 	}
 
 
@@ -48,10 +51,30 @@ public class Factura_detalle {
 	}
 
 
+	public Factura getFactura() {
+		return factura;
+	}
+
+
+	public void setFactura(Factura factura) {
+		this.factura = factura;
+	}
+
+
+	public libro getLibro() {
+		return libro;
+	}
+
+
+	public void setLibro(libro libro) {
+		this.libro = libro;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Factura_detalle [idFactura_detalle=" + idFactura_detalle + ", cantidad=" + cantidad + ", subtotal="
-				+ subtotal + "]";
+				+ subtotal + ", factura=" + factura + ", libro=" + libro + "]";
 	}
 	
 	

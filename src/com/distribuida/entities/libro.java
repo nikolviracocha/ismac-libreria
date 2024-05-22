@@ -19,6 +19,9 @@ public class libro {
 	private String presentacion;
 	private double precio;
 	
+	private Categoria categoria;
+	private Autor autor;
+	
 
 	public libro() {}
 
@@ -184,13 +187,33 @@ public class libro {
 	}
 
 
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+
+	public Autor getAutor() {
+		return autor;
+	}
+
+
+	public void setAutor(Autor autor) {
+		this.autor = autor;
+	}
+
+
 	@Override
 	public String toString() {
 		return "libro [idlibro=" + idlibro + ", titulo=" + titulo + ", editorial=" + editorial + ", num_paginas="
 				+ num_paginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fech_publicacion=" + fech_publicacion
 				+ ", descripcion=" + descripcion + ", tipo_pasta=" + tipo_pasta + ", isbn=" + isbn + ", num_ejemplares="
 				+ num_ejemplares + ", portada=" + portada + ", presentacion=" + presentacion + ", precio=" + precio
-				+ "]";
+				+ ", categoria=" + categoria + ", autor=" + autor + "]";
 	}
 	
 	
