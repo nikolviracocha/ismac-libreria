@@ -7,7 +7,7 @@ public class Factura_detalle {
 	private double subtotal;
 	
 	
-	private Factura_detalle() {}
+	public Factura_detalle() {}
 
 
 	public Factura_detalle(int idFactura_detalle, int cantidad, double subtotal) {
