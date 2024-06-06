@@ -2,6 +2,8 @@ package com.distribuida.entities;
 
 import java.sql.Date;
 
+import org.springframework.stereotype.Component;
+@Component
 public class libro {
 
 	private int idlibro;

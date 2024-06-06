@@ -2,17 +2,36 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
+@Component
+@Entity
+@Table(name="Cliente")
+
 public class Cliente {
 	
 	// Atributos
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY )
+	@Column(name = "id_Cliente")
 	private int idCliente;
+	@Column(name = "cedula")
 	private String cedula;
+	@Column(name = "nombre")
 	private String nombre;
+	@Column(name = "apellido")
 	private String apellido;
-	private Date fechaNacimiento;
+	@Column(name = "direccion")
 	private String direccion;
+	@Column(name = "telefono")
 	private String telefono;
+	@Column(name = "correo")
 	private String correo;
 	
 	// Constructor
@@ -20,11 +39,11 @@ public class Cliente {
 	public Cliente() {}
 	
 	public 	Cliente(int idCliente, String cedula, String nombre, String apellido,Date fechaNacimiento, String direccion, String telefono, String correo) {
+		
 		this.idCliente = idCliente;
 		this.cedula =cedula;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.fechaNacimiento = fechaNacimiento;
 		this.direccion =direccion;
 		this.telefono =telefono;
 		this.correo =correo;
@@ -33,7 +52,7 @@ public class Cliente {
 	public int getIdCliente() {
 		return idCliente;
 	}
-	public void setIdCliente(int IdCliente) {
+	public void setIdCliente(int idCliente) {
 		this.idCliente = idCliente;
 	}
 
@@ -61,13 +80,6 @@ public class Cliente {
 		this.apellido = apellido;
 	}
 
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
-	}
-
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
-	}
 
 	public String getDireccion() {
 		return direccion;
@@ -95,9 +107,8 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido="
-				+ apellido + ", fechaNacimiento=" + fechaNacimiento + ", direccion=" + direccion + ", telefono="
-				+ telefono + ", correo=" + correo + "]";
+		return "Cliente [idcliente=" + idCliente + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido="
+				+ apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + "]";
 	}
 
 	
