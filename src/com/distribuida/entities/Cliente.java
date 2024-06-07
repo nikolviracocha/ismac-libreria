@@ -111,7 +111,7 @@ public class Cliente {
 				+ apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + "]";
 	}
 
-	
+	// hola
 	
 	
 	
