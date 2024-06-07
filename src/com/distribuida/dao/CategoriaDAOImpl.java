@@ -9,7 +9,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.distribuida.entities.Categoria;
+import com.distribuida.entities.categoria;
 
 @Repository
 public class CategoriaDAOImpl implements CategoriaDAO {
@@ -19,33 +19,27 @@ public class CategoriaDAOImpl implements CategoriaDAO {
 	
 	@Override
 	@Transactional
-	public List<Categoria> findAll(){
+	public List<categoria> findAll(){
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("from Categoria",Categoria.class).getResultList();
+		return session.createQuery("from categoria",categoria.class).getResultList();
 	
 	}
 
 	@Override
-	public List<Categoria> findll() {
+	public categoria findOne(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Categoria findOne(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void add(Categoria categoria) {
+	public void add(categoria categoria) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void up(Categoria categoria) {
+	public void up(categoria categoria) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -55,6 +49,8 @@ public class CategoriaDAOImpl implements CategoriaDAO {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 	
 		

@@ -2,24 +2,23 @@ package com.distribuida.dao;
 
 import java.util.List;
 
-import com.distribuida.entities.Categoria;
+import com.distribuida.entities.categoria;
 
 public interface CategoriaDAO {
 
 	//CRUD Basico
 	
-		public List<Categoria> findll();
+		public List<categoria> findAll();
 		
-		public Categoria findOne(int id);
+		public categoria findOne(int id);
 		
-		public void add(Categoria categoria);
+		public void add(categoria categoria);
 		
-		public void up(Categoria categoria);
+		public void up(categoria categoria);
 		
 		public void del(int id);
 
-		List<Categoria> findAll();
 		
-		//CRUD Avanzado
-	
+		
+
 }

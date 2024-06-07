@@ -8,7 +8,7 @@ public interface AutorDAO {
 
 	//CRUD Basico
 	
-		public List<Autor> findll();
+		public List<Autor> findAll();
 		
 		public Autor findOne(int id);
 		
@@ -18,10 +18,6 @@ public interface AutorDAO {
 		
 		public void del(int id);
 
-		List<Autor> findAll();
-		
-		//CRUD Avanzado
-	
 	
 	
 }

@@ -21,7 +21,7 @@ public class libro {
 	private String presentacion;
 	private double precio;
 	
-	private Categoria categoria;
+	private categoria categoria;
 	private Autor autor;
 	
 
@@ -189,12 +189,12 @@ public class libro {
 	}
 
 
-	public Categoria getCategoria() {
+	public categoria getCategoria() {
 		return categoria;
 	}
 
 
-	public void setCategoria(Categoria categoria) {
+	public void setCategoria(categoria categoria) {
 		this.categoria = categoria;
 	}
 
