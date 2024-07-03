@@ -12,14 +12,13 @@ import javax.persistence.Table;
 import org.springframework.stereotype.Component;
 @Component
 @Entity
-@Table(name="Cliente")
-
+@Table(name="cliente")
 public class Cliente {
 	
 	// Atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "id_Cliente")
+	@Column(name = "id_cliente")
 	private int idCliente;
 	@Column(name = "cedula")
 	private String cedula;
@@ -38,7 +37,7 @@ public class Cliente {
 	
 	public Cliente() {}
 	
-	public 	Cliente(int idCliente, String cedula, String nombre, String apellido,Date fechaNacimiento, String direccion, String telefono, String correo) {
+	public 	Cliente(int idCliente, String cedula, String nombre, String apellido,String direccion, String telefono, String correo) {
 		
 		this.idCliente = idCliente;
 		this.cedula =cedula;
@@ -110,11 +109,6 @@ public class Cliente {
 		return "Cliente [idcliente=" + idCliente + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido="
 				+ apellido + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + "]";
 	}
-
-	
-	
-	
-	
 	
 	
 	

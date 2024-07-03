@@ -1,29 +1,29 @@
-package com.distribuida.pricipal;
+package com.distribuida.principal;
 
 import java.util.List;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.distribuida.dao.AutorDAO;
+import com.distribuida.entities.Autor;
 
-import com.distribuida.dao.CategoriaDAO;
-import com.distribuida.entities.categoria;
+public class PrincipalAutor {
 
-public class PrincipalCategoria {
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		
-	CategoriaDAO categoriaDAO = context.getBean("categoriaDAOImpl", CategoriaDAO.class);
+	AutorDAO AutorDAO = context.getBean("autorDAOImpl", AutorDAO.class);
 		
-		List<categoria> Categoria = categoriaDAO.findAll();
+		List<Autor> Autor = AutorDAO.findAll();
 		
-		Categoria.forEach(item -> {
+		Autor.forEach(item -> {
 			System.out.println(item.toString());
 		});
 		context.close();
-
-}
+	}
 	
-}
+	
+
+	}
