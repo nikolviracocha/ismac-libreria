@@ -76,6 +76,24 @@ public class libro {
 	
 
 
+	/**
+	 * @param idlibro
+	 * @param titulo
+	 * @param editorial
+	 * @param numpaginas
+	 * @param edicion
+	 * @param idioma
+	 * @param fechpublicacion
+	 * @param descripcion
+	 * @param tipopasta
+	 * @param isbn
+	 * @param numejemplares
+	 * @param portada
+	 * @param presentacion
+	 * @param precio
+	 * @param categoria
+	 * @param autor
+	 */
 	public libro(int idlibro, String titulo, String editorial, int numpaginas, String edicion, String idioma,
 			Date fechpublicacion, String descripcion, String tipopasta, String isbn, int numejemplares, String portada,
 			String presentacion, double precio, com.distribuida.entities.categoria categoria, Autor autor) {

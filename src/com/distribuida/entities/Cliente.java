@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import org.springframework.stereotype.Component;
 @Component
 @Entity
-@Table(name="cliente")
+@Table(name="Cliente")
 public class Cliente {
 	
 	// Atributos
