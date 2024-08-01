@@ -8,7 +8,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.distribuida.entities.libro;
+import com.distribuida.entities.Libro;
 
 @Repository
 
@@ -21,11 +21,11 @@ public class LibroDAOImpl implements LibroDAO {
 
 	@Override
 	@Transactional
-	public List<libro> findAll() {
+	public List<Libro> findAll() {
 		//TODO Auto-generated method stub
 				Session session=sessionFactory.getCurrentSession();
 				
-				return session.createQuery("from libro",libro.class).getResultList();
+				return session.createQuery("from libro",Libro.class).getResultList();
 	}
 
 	
@@ -33,15 +33,15 @@ public class LibroDAOImpl implements LibroDAO {
 	
 	@Override
 	@Transactional
-	public libro findOne(int id) {
+	public Libro findOne(int id) {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
-		return  session.get(libro.class,id);
+		return  session.get(Libro.class,id);
 	}
 
 	@Override
 	@Transactional
-	public void add(libro libro) {
+	public void add(Libro libro) {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
 		session.saveOrUpdate(libro);
@@ -50,7 +50,7 @@ public class LibroDAOImpl implements LibroDAO {
 
 	@Override
 	@Transactional
-	public void up(libro libro) {
+	public void up(Libro libro) {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
 		session.saveOrUpdate(libro);

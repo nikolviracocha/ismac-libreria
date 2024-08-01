@@ -43,7 +43,7 @@ public class Factura_detalle {
 	
 	
 	private Factura factura;
-	private libro libro;
+	private Libro libro;
 	
 
 	public Factura_detalle() {}
@@ -53,7 +53,7 @@ public class Factura_detalle {
 		
 		
 	public Factura_detalle(int idFactura_detalle, int cantidad, double subtotal, Factura factura,
-			com.distribuida.entities.libro libro) {
+			com.distribuida.entities.Libro libro) {
 		
 		this.idFactura_detalle = idFactura_detalle;
 		this.cantidad = cantidad;
@@ -129,7 +129,7 @@ public class Factura_detalle {
 
 
 
-	public libro getLibro() {
+	public Libro getLibro() {
 		return libro;
 	}
 
@@ -137,7 +137,7 @@ public class Factura_detalle {
 
 
 
-	public void setLibro(libro libro) {
+	public void setLibro(Libro libro) {
 		this.libro = libro;
 	}
 

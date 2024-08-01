@@ -2,19 +2,19 @@ package com.distribuida.dao;
 
 import java.util.List;
 
-import com.distribuida.entities.libro;
+import com.distribuida.entities.Libro;
 
 public interface LibroDAO {
 	
 	//CRUD Basico
 	
-	public List<libro> findAll();
+	public List<Libro> findAll();
 	
-	public libro findOne(int id);
+	public Libro findOne(int id);
 	
-	public void add(libro Libro);
+	public void add(Libro Libro);
 	
-	public void up(libro Libro);
+	public void up(Libro Libro);
 	
 	public void del(int id);
 	

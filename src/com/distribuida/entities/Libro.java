@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "factura")
 
-public class libro {
+public class Libro {
 	
 	//@OneToOne
 		//@ManyToOne
@@ -69,7 +69,7 @@ public class libro {
 
 	
 	
-	public libro() {}
+	public Libro() {}
 
 
 	
@@ -94,7 +94,7 @@ public class libro {
 	 * @param categoria
 	 * @param autor
 	 */
-	public libro(int idlibro, String titulo, String editorial, int numpaginas, String edicion, String idioma,
+	public Libro(int idlibro, String titulo, String editorial, int numpaginas, String edicion, String idioma,
 			Date fechpublicacion, String descripcion, String tipopasta, String isbn, int numejemplares, String portada,
 			String presentacion, double precio, com.distribuida.entities.categoria categoria, Autor autor) {
 		

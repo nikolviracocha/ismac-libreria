@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.distribuida.dao.AutorDAO;
 import com.distribuida.dao.CategoriaDAO;
 import com.distribuida.dao.LibroDAO;
-import com.distribuida.entities.libro;
+import com.distribuida.entities.Libro;
 
 
 public class Principallibro {
@@ -22,11 +22,11 @@ public class Principallibro {
 				
 		// CRUD : CREATE , READ, UPDATE, DELETE
 		// Add  
-	libro libro = new libro();
+	Libro libro = new Libro();
 	libro.setCategoria(categoriaDAO.findOne(2));
 	//libroDAO.add(libro);
 		// Up
-	libro libro2 = new libro();
+	Libro libro2 = new Libro();
 	libro2.setAutor(autorDAO.findOne(3));
 	//libroDAO.up(libro2);
 		
