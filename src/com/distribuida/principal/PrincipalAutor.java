@@ -16,7 +16,7 @@ public class PrincipalAutor {
 		
 	AutorDAO AutorDAO = context.getBean("autorDAOImpl", AutorDAO.class);
 		
-		List<Autor> Autor = AutorDAO.findAll();
+		List<Autor> Autor = AutorDAO.findALL();
 		
 		Autor.forEach(item -> {
 			System.out.println(item.toString());

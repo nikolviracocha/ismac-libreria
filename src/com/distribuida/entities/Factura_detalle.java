@@ -38,19 +38,15 @@ public class Factura_detalle {
 	
 	//private int idCliente;
 	@JoinColumn(name ="id_factura") 
+	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+	private Factura factura;
+	
 	@JoinColumn(name ="id_libro") 
 	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
-	
-	
-	private Factura factura;
 	private Libro libro;
 	
 
-	public Factura_detalle() {}
 
-
-	
-		
 		
 	public Factura_detalle(int idFactura_detalle, int cantidad, double subtotal, Factura factura,
 			com.distribuida.entities.Libro libro) {

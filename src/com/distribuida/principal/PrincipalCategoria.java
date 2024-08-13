@@ -17,7 +17,7 @@ public class PrincipalCategoria {
 		
 	CategoriaDAO categoriaDAO = context.getBean("categoriaDAOImpl", CategoriaDAO.class);
 		
-		List<categoria> Categoria = categoriaDAO.findAll();
+		List<categoria> Categoria = categoriaDAO.findALL();
 		
 		Categoria.forEach(item -> {
 			System.out.println(item.toString());

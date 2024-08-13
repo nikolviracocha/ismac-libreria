@@ -8,7 +8,7 @@ public interface ClienteDAO {
 	
 	//CRUD Basico
 	
-	public List<Cliente> findAll();
+	public List<Cliente> findALL();
 	
 	public Cliente findOne(int id);
 	

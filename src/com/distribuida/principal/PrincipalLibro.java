@@ -10,7 +10,7 @@ import com.distribuida.dao.LibroDAO;
 import com.distribuida.entities.Libro;
 
 
-public class Principallibro {
+public class PrincipalLibro {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

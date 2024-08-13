@@ -19,45 +19,45 @@ import com.distribuida.dao.LibroDAO;
 public class FacturacionController {
 	
 	@Autowired
-	private ClienteDAO clienteDAO;
+	private ClienteDAO ClienteDAO;
 	
 	@Autowired
-	private  LibroDAO libroDAO;
+	private LibroDAO LibroDAO;
 	
 	@Autowired
-	private FacturaDAO facturaDAO;
+	private FacturaDAO FacturaDAO;
 	
 	@Autowired
-	private Factura_detalleDAO facturaDetalleDAO;
-	
-	
-	@GetMapping("/principal")
+	private Factura_detalleDAO factura_DetalleDAO;
+
+
+	@GetMapping("/prinpal")
 	public String principal() {
 		return "principal";
 	}
 	
-	@GetMapping("/findAll")
-	public String findAll(ModelMap modelMap) {
-		modelMap.addAttribute("facturas", facturaDAO.findAll());
-		 
-		return "facturacion-listar";
-		 
-	}
-	
-	@GetMapping("/findOne")
-	public String finOne(@RequestParam ("idFactura") @Nullable Integer idFactura
-			,ModelMap modelMap) {
-		
-		modelMap.addAttribute("factura", facturaDAO.findOne(idFactura));
+	@GetMapping("findAll")
+	public String findAll(ModelMap modelMAl) {
 		
 		return "facturacion-listar";
 	}
 	
-	@GetMapping("/findOneCliente")
-	public String findOnecliente(@RequestParam("idCliente") @Nullable Integer idCliente,ModelMap modelMap) {
-		modelMap.addAttribute("cliente", clienteDAO.findOne(idCliente));
-		
-		return "redirect:/facturacion/principal";
-	}
-
+	@GetMapping("/findOneFactura")
+	public String findOne(@RequestParam("idFactura") @Nullable Integer idFactura
+						,ModelMap modelMap) {
+	
+	modelMap.addAttribute("factura", FacturaDAO.findOne(idFactura));
+	
+	return "facturacion-listar";
+	
 }
+	@GetMapping("/findOneCliente")
+	public String findOneCliente(@RequestParam("idCliente") @Nullable Integer idCliente
+						,ModelMap modelMAp) {
+		modelMAp.addAttribute("cliente", ClienteDAO.findOne(idCliente));
+
+			return "redirect:/factruacion2/principal";
+}
+}
+
+

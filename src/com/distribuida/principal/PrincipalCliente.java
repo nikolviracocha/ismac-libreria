@@ -31,7 +31,7 @@ public class PrincipalCliente {
 		
 		//findAll
 		//List<Cliente> clientes = clienteDAO.findAll();
-		clienteDAO.findAll().forEach(item -> {System.out.println(item.toString());});
+		clienteDAO.findALL().forEach(item -> {System.out.println(item.toString());});
 		context.close();
 	
  

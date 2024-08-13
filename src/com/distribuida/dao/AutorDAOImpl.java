@@ -17,13 +17,14 @@ public class AutorDAOImpl  implements AutorDAO {
 	
 	@Override
 	@Transactional
-	public List<Autor> findAll() {
+	public List<Autor> findALL(){
 		// TODO Auto-generated method stub
-		Session session = sessionFactory.getCurrentSession();
+		Session session=sessionFactory.getCurrentSession();
 		return session.createQuery("from Autor",Autor.class).getResultList();
+		
+}
 	
-	}
-
+	
 
 	@Override
 	public Autor findOne(int id) {
@@ -31,13 +32,11 @@ public class AutorDAOImpl  implements AutorDAO {
 		return null;
 	}
 
-
 	@Override
 	public void add(Autor autor) {
 		// TODO Auto-generated method stub
 		
 	}
-
 
 	@Override
 	public void up(Autor autor) {
@@ -45,13 +44,9 @@ public class AutorDAOImpl  implements AutorDAO {
 		
 	}
 
-
 	@Override
 	public void del(int id) {
 		// TODO Auto-generated method stub
 		
 	}
-
-
-
 }

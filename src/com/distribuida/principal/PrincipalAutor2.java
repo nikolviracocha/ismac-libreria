@@ -33,7 +33,7 @@ public class PrincipalAutor2 {
 		try{System.out.println("*************** DEL***********"+autorDAO.findOne(61));} catch (Exception e) { e.printStackTrace();};
 		//findAll
 		//List<Cliente> clientes = clienteDAO.findAll();
-		autorDAO.findAll().forEach(item -> {System.out.println(item.toString());});
+		autorDAO.findALL().forEach(item -> {System.out.println(item.toString());});
 		context.close();
 
 	}

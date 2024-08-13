@@ -8,7 +8,7 @@ public interface AutorDAO {
 
 	//CRUD Basico
 	
-		public List<Autor> findAll();
+		public List<Autor> findALL();
 		
 		public Autor findOne(int id);
 		

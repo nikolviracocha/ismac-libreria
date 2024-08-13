@@ -8,7 +8,7 @@ public interface CategoriaDAO {
 
 	//CRUD Basico
 	
-		public List<categoria> findAll();
+		public List<categoria> findALL();
 		
 		public categoria findOne(int id);
 		

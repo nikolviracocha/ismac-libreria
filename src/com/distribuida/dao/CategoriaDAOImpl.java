@@ -19,7 +19,7 @@ public class CategoriaDAOImpl implements CategoriaDAO {
 	
 	@Override
 	@Transactional
-	public List<categoria> findAll(){
+	public List<categoria> findALL(){
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		return session.createQuery("from categoria",categoria.class).getResultList();

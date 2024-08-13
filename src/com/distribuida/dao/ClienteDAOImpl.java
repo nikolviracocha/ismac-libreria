@@ -20,7 +20,7 @@ public class ClienteDAOImpl implements ClienteDAO {
 
 	@Override
 	@Transactional
-	public List<Cliente> findAll() {
+	public List<Cliente> findALL() {
 		//TODO Auto-generated method stub
 				Session session=sessionFactory.getCurrentSession();
 				
